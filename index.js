@@ -32,8 +32,9 @@ promoBtn.addEventListener('click', (e) => {
   const lastTotal = totalWithPromo.innerText
   if (promoCode.value == 'stevekaku' && !flag) {
     flag = true
-    return (totalWithPromo.innerText = lastTotal - Number(lastTotal * 0.2))
+    totalWithPromo.innerText = lastTotal - Number(lastTotal * 0.2)
   }
+  promoCode.value = ''
 })
 
 //Memory Function
